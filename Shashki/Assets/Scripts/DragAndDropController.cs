@@ -40,7 +40,7 @@ public class DragAndDropController : MonoBehaviour
             DraggedObject = null;
         }
 
-        if (MouseInput.GetButtonDown(MouseButtonCode.Right))
+        if (MouseInput.GetButtonDown(MouseButtonCode.Right) || Input.GetKeyDown(KeyCode.Escape))
         {
             DraggedObject.transform.position = DraggedObjectOldPosition;
             DraggedObject.GetComponent<MeshRenderer>().material.color = new Color(

@@ -18,17 +18,17 @@ public class CameraContoller : MonoBehaviour
 
     private void Update()
     {
-        var horizontal = UnityEngine.Input.GetAxis(AxisConsts.Horizontal);
-        var vertical = UnityEngine.Input.GetAxis(AxisConsts.Vertical);
-        var boost = UnityEngine.Input.GetKey(KeyCode.LeftShift) ? boostValue : 1f;
+        var horizontal = Input.GetAxis(AxisConsts.Horizontal);
+        var vertical = Input.GetAxis(AxisConsts.Vertical);
+        var boost = Input.GetKey(KeyCode.LeftShift) ? boostValue : 1f;
 
         var commonMultiplier = boost * Time.deltaTime;
 
-        var rotate = rotateSpeed * UnityEngine.Input.GetAxis(AxisConsts.MouseScrollWheel) * commonMultiplier * Vector3.up;
+        var rotate = rotateSpeed * Input.GetAxis(AxisConsts.MouseScrollWheel) * commonMultiplier * Vector3.up;
         transform.Rotate(rotate, Space.World);
         transform.Translate(commonMultiplier * speed * new Vector3(horizontal, 0, vertical), Space.Self);
 
-        if (UnityEngine.Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             isJump = true;
         }
