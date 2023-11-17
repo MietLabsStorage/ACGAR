@@ -57,6 +57,7 @@ public class DragAndDropController : MonoBehaviour
     {
         if (Physics.Raycast(ray, out var hit, 1000f, LayerMask.GetMask("DragableLayer")))
         {
+            Debug.Log(1);
             if (MouseInput.GetButtonDown(MouseButtonCode.Left))
             {
                 DraggedObject = hit.collider.gameObject;
