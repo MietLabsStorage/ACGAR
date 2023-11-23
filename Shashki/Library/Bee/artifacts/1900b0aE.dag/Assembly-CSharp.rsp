@@ -348,6 +348,8 @@
 "Assets/Scripts/UnityHelpers/InputHelpers/AxisConsts.cs"
 "Assets/Scripts/UnityHelpers/InputHelpers/MouseButtonCode.cs"
 "Assets/Scripts/UnityHelpers/InputHelpers/MouseInput.cs"
+"Assets/Scripts/UnityHelpers/Layers.cs"
+"Assets/Scripts/UnityHelpers/Tags.cs"
 -langversion:9.0
 
 /deterministic

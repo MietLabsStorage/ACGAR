@@ -6,7 +6,7 @@ public class CameraContoller : MonoBehaviour
     public float rotateSpeed = 5000.0f;
     public float speed = 5.0f;
     public float boostValue = 2f;
-    public float jumpStartBoost = 100f;
+    public float jumpStartBoost = 50f;
 
     private bool isJump = false;
     private float jumpBoost;
@@ -35,7 +35,7 @@ public class CameraContoller : MonoBehaviour
 
         if (isJump)
         {
-            if (jumpBoost <= -jumpStartBoost)
+            if (jumpBoost <= 0)
             {
                 isJump = false;
                 jumpBoost = jumpStartBoost;
