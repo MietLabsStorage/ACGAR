@@ -35,7 +35,7 @@ public class DragAndDropController : MonoBehaviour
             var addedY = isQueen ? 0.85f : 0;
             DraggedObject.transform.position = new Vector3(hit.point.x, hit.point.y + 1 + addedY, hit.point.z);
 
-            if (hit.collider.tag == Tags.WhiteCheck && MouseInput.GetButtonDown(MouseButtonCode.Left))
+            if ((hit.collider.tag == Tags.WhiteCheck || (!isCkeck && isGround)) && MouseInput.GetButtonDown(MouseButtonCode.Left))
             {
                 DraggedObject.transform.position = new Vector3(hit.point.x, hit.point.y + addedY, hit.point.z);
                 DraggedObject.GetComponent<MeshRenderer>().material.color = new Color(
